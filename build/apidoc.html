@@ -1,0 +1,3488 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://qunitjs.com"
+
+    >qunitjs (v2.3.2)</a>
+</h1>
+<h4>An easy-to-use JavaScript Unit Testing framework.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.qunitjs">module qunitjs</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">qunitjs.</span>isLocal</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.begin">
+            function <span class="apidocSignatureSpan">qunitjs.</span>begin
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.diff">
+            function <span class="apidocSignatureSpan">qunitjs.</span>diff
+            <span class="apidocSignatureSpan">(o, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.done">
+            function <span class="apidocSignatureSpan">qunitjs.</span>done
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.equiv">
+            function <span class="apidocSignatureSpan">qunitjs.</span>equiv
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.extend">
+            function <span class="apidocSignatureSpan">qunitjs.</span>extend
+            <span class="apidocSignatureSpan">(a, b, undefOnly)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.is">
+            function <span class="apidocSignatureSpan">qunitjs.</span>is
+            <span class="apidocSignatureSpan">(type, obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.load">
+            function <span class="apidocSignatureSpan">qunitjs.</span>load
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.log">
+            function <span class="apidocSignatureSpan">qunitjs.</span>log
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.module">
+            function <span class="apidocSignatureSpan">qunitjs.</span>module
+            <span class="apidocSignatureSpan">(name, testEnvironment, executeNow)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.moduleDone">
+            function <span class="apidocSignatureSpan">qunitjs.</span>moduleDone
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.moduleStart">
+            function <span class="apidocSignatureSpan">qunitjs.</span>moduleStart
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.objectType">
+            function <span class="apidocSignatureSpan">qunitjs.</span>objectType
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.on">
+            function <span class="apidocSignatureSpan">qunitjs.</span>on
+            <span class="apidocSignatureSpan">(eventName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.onError">
+            function <span class="apidocSignatureSpan">qunitjs.</span>onError
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.only">
+            function <span class="apidocSignatureSpan">qunitjs.</span>only
+            <span class="apidocSignatureSpan">(testName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.pushFailure">
+            function <span class="apidocSignatureSpan">qunitjs.</span>pushFailure
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.run">
+            function <span class="apidocSignatureSpan">qunitjs.</span>run
+            <span class="apidocSignatureSpan">( args, options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.skip">
+            function <span class="apidocSignatureSpan">qunitjs.</span>skip
+            <span class="apidocSignatureSpan">(testName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.stack">
+            function <span class="apidocSignatureSpan">qunitjs.</span>stack
+            <span class="apidocSignatureSpan">(offset)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.start">
+            function <span class="apidocSignatureSpan">qunitjs.</span>start
+            <span class="apidocSignatureSpan">(count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.test">
+            function <span class="apidocSignatureSpan">qunitjs.</span>test
+            <span class="apidocSignatureSpan">(testName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.testDone">
+            function <span class="apidocSignatureSpan">qunitjs.</span>testDone
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.testStart">
+            function <span class="apidocSignatureSpan">qunitjs.</span>testStart
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.todo">
+            function <span class="apidocSignatureSpan">qunitjs.</span>todo
+            <span class="apidocSignatureSpan">(testName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.</span>QUnit</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.</span>assert</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.</span>dump</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.</span>dump.parsers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.</span>utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.qunitjs.QUnit">module qunitjs.QUnit</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">qunitjs.QUnit.</span>isLocal</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.begin">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>begin
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.diff">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>diff
+            <span class="apidocSignatureSpan">(o, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.done">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>done
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.equiv">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>equiv
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.extend">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>extend
+            <span class="apidocSignatureSpan">(a, b, undefOnly)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.is">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>is
+            <span class="apidocSignatureSpan">(type, obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.load">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>load
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.log">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>log
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.module">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>module
+            <span class="apidocSignatureSpan">(name, testEnvironment, executeNow)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.moduleDone">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>moduleDone
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.moduleStart">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>moduleStart
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.objectType">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>objectType
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.on">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>on
+            <span class="apidocSignatureSpan">(eventName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.onError">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>onError
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.only">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>only
+            <span class="apidocSignatureSpan">(testName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.pushFailure">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>pushFailure
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.skip">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>skip
+            <span class="apidocSignatureSpan">(testName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.stack">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>stack
+            <span class="apidocSignatureSpan">(offset)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.start">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>start
+            <span class="apidocSignatureSpan">(count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.test">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>test
+            <span class="apidocSignatureSpan">(testName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.testDone">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>testDone
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.testStart">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>testStart
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.QUnit.todo">
+            function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>todo
+            <span class="apidocSignatureSpan">(testName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.</span>QUnit</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.QUnit.</span>assert</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.QUnit.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.QUnit.</span>dump</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.QUnit.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.qunitjs.assert">module qunitjs.assert</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.assert.raises">
+            function <span class="apidocSignatureSpan">qunitjs.assert.</span>raises
+            <span class="apidocSignatureSpan">(block, expected, message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.qunitjs.dump">module qunitjs.dump</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">qunitjs.dump.</span>HTML</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">qunitjs.dump.</span>multiline</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.down">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>down
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.indent">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>indent
+            <span class="apidocSignatureSpan">(extra)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.join">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>join
+            <span class="apidocSignatureSpan">(pre, arr, post)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.literal">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>literal
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parse">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>parse
+            <span class="apidocSignatureSpan">(obj, objType, stack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.quote">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>quote
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.separator">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>separator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.setParser">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>setParser
+            <span class="apidocSignatureSpan">(name, parser)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.typeOf">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>typeOf
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.up">
+            function <span class="apidocSignatureSpan">qunitjs.dump.</span>up
+            <span class="apidocSignatureSpan">(a)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">qunitjs.dump.</span>depth</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">qunitjs.dump.</span>maxDepth</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">qunitjs.dump.</span>parsers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.dump.</span>indentChar</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.qunitjs.dump.parsers">module qunitjs.dump.parsers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.arguments">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>arguments
+            <span class="apidocSignatureSpan">(arr, stack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.array">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>array
+            <span class="apidocSignatureSpan">(arr, stack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.attribute">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>attribute
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.boolean">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>boolean
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.date">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>date
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.error">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>error
+            <span class="apidocSignatureSpan">(_error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.function">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>function
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.functionArgs">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>functionArgs
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.key">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>key
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.node">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>node
+            <span class="apidocSignatureSpan">(_node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.nodelist">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>nodelist
+            <span class="apidocSignatureSpan">(arr, stack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.number">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>number
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.object">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>object
+            <span class="apidocSignatureSpan">(map, stack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.regexp">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>regexp
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.string">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>string
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.dump.parsers.symbol">
+            function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>symbol
+            <span class="apidocSignatureSpan">(sym)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>document</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>functionCode</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>null</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>undefined</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>unknown</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>window</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.qunitjs.run">module qunitjs.run</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.run.run">
+            function <span class="apidocSignatureSpan">qunitjs.</span>run
+            <span class="apidocSignatureSpan">( args, options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.run.abort">
+            function <span class="apidocSignatureSpan">qunitjs.run.</span>abort
+            <span class="apidocSignatureSpan">( callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.run.restart">
+            function <span class="apidocSignatureSpan">qunitjs.run.</span>restart
+            <span class="apidocSignatureSpan">( args )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.run.watch">
+            function <span class="apidocSignatureSpan">qunitjs.run.</span>watch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.qunitjs.utils">module qunitjs.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.utils.capitalize">
+            function <span class="apidocSignatureSpan">qunitjs.utils.</span>capitalize
+            <span class="apidocSignatureSpan">( string )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.utils.error">
+            function <span class="apidocSignatureSpan">qunitjs.utils.</span>error
+            <span class="apidocSignatureSpan">( message )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.qunitjs.utils.getFilesFromArgs">
+            function <span class="apidocSignatureSpan">qunitjs.utils.</span>getFilesFromArgs
+            <span class="apidocSignatureSpan">( args )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.qunitjs" id="apidoc.module.qunitjs">module qunitjs</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.begin" id="apidoc.element.qunitjs.begin">
+        function <span class="apidocSignatureSpan">qunitjs.</span>begin
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.diff" id="apidoc.element.qunitjs.diff">
+        function <span class="apidocSignatureSpan">qunitjs.</span>diff
+        <span class="apidocSignatureSpan">(o, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diff = function (o, n) {
+		var diff, output, text;
+		diff = new DiffMatchPatch();
+		output = diff.DiffMain(o, n);
+		diff.diffCleanupEfficiency(output);
+		text = diff.diffPrettyHtml(output);
+
+		return text;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.done" id="apidoc.element.qunitjs.done">
+        function <span class="apidocSignatureSpan">qunitjs.</span>done
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.equiv" id="apidoc.element.qunitjs.equiv">
+        function <span class="apidocSignatureSpan">qunitjs.</span>equiv
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function innerEquiv(a, b) {
+		var i, pair;
+
+		// We&#x27;re done when there&#x27;s nothing more to compare
+		if (arguments.length &#x3c; 2) {
+			return true;
+		}
+
+		// Clear the global pair queue and add the top-level values being compared
+		pairs = [{ a: a, b: b }];
+
+		for (i = 0; i &#x3c; pairs.length; i++) {
+			pair = pairs[i];
+
+			// Perform type-specific comparison on any pairs that are not strictly
+			// equal. For container types, that comparison will postpone comparison
+			// of any sub-container pair to the end of the pair queue. This gives
+			// breadth-first search order. It also avoids the reprocessing of
+			// reference-equal siblings, cousins etc, which can have a significant speed
+			// impact when comparing a container of small objects each of which has a
+			// reference to the same (singleton) large object.
+			if (pair.a !== pair.b &#x26;&#x26; !typeEquiv(pair.a, pair.b)) {
+				return false;
+			}
+		}
+
+		// ...across all consecutive argument pairs
+		return arguments.length === 2 || innerEquiv.apply(this, [].slice.call(arguments, 1));
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.extend" id="apidoc.element.qunitjs.extend">
+        function <span class="apidocSignatureSpan">qunitjs.</span>extend
+        <span class="apidocSignatureSpan">(a, b, undefOnly)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(a, b, undefOnly) {
+	for (var prop in b) {
+		if (hasOwn.call(b, prop)) {
+			if (b[prop] === undefined) {
+				delete a[prop];
+			} else if (!(undefOnly &#x26;&#x26; typeof a[prop] !== &#x22;undefined&#x22;)) {
+				a[prop] = b[prop];
+			}
+		}
+	}
+
+	return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.is" id="apidoc.element.qunitjs.is">
+        function <span class="apidocSignatureSpan">qunitjs.</span>is
+        <span class="apidocSignatureSpan">(type, obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function is(type, obj) {
+	return objectType(obj) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.load" id="apidoc.element.qunitjs.load">
+        function <span class="apidocSignatureSpan">qunitjs.</span>load
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load() {
+		config.pageLoaded = true;
+
+		// Initialize the configuration options
+		extend(config, {
+			stats: { all: 0, bad: 0 },
+			started: 0,
+			updateRate: 1000,
+			autostart: true,
+			filter: &#x22;&#x22;
+		}, true);
+
+		if (!runStarted) {
+			config.blocking = false;
+
+			if (config.autostart) {
+				scheduleBegin();
+			}
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.log" id="apidoc.element.qunitjs.log">
+        function <span class="apidocSignatureSpan">qunitjs.</span>log
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	if ( seed ) {
+		if ( seed === true ) {
+			QUnit.config.seed = Math.random().toString( 36 ).slice( 2 );
+		} else {
+			QUnit.config.seed = seed;
+		}
+
+		console.<span class="apidocCodeKeywordSpan">log</span>( `Running tests with seed: ${QUnit.config.seed}` );
+	}
+
+	// TODO: Enable mode where QUnit is not auto-injected, but other setup is
+	// still done automatically.
+	global.QUnit = QUnit;
+
+	options.reporter.init( QUnit );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.module" id="apidoc.element.qunitjs.module">
+        function <span class="apidocSignatureSpan">qunitjs.</span>module
+        <span class="apidocSignatureSpan">(name, testEnvironment, executeNow)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function module(name, testEnvironment, executeNow) {
+		if (arguments.length === 2) {
+			if (objectType(testEnvironment) === &#x22;function&#x22;) {
+				executeNow = testEnvironment;
+				testEnvironment = undefined;
+			}
+		}
+
+		var module = createModule(name, testEnvironment);
+
+		// Move any hooks to a &#x27;hooks&#x27; object
+		if (module.testEnvironment) {
+			module.hooks = {
+				before: module.testEnvironment.before,
+				beforeEach: module.testEnvironment.beforeEach,
+				afterEach: module.testEnvironment.afterEach,
+				after: module.testEnvironment.after
+			};
+
+			delete module.testEnvironment.before;
+			delete module.testEnvironment.beforeEach;
+			delete module.testEnvironment.afterEach;
+			delete module.testEnvironment.after;
+		}
+
+		var moduleFns = {
+			before: setHook(module, &#x22;before&#x22;),
+			beforeEach: setHook(module, &#x22;beforeEach&#x22;),
+			afterEach: setHook(module, &#x22;afterEach&#x22;),
+			after: setHook(module, &#x22;after&#x22;)
+		};
+
+		var currentModule = config.currentModule;
+		if (objectType(executeNow) === &#x22;function&#x22;) {
+			moduleStack.push(module);
+			config.currentModule = module;
+			executeNow.call(module.testEnvironment, moduleFns);
+			moduleStack.pop();
+			module = module.parentModule || currentModule;
+		}
+
+		config.currentModule = module;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.moduleDone" id="apidoc.element.qunitjs.moduleDone">
+        function <span class="apidocSignatureSpan">qunitjs.</span>moduleDone
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.moduleStart" id="apidoc.element.qunitjs.moduleStart">
+        function <span class="apidocSignatureSpan">qunitjs.</span>moduleStart
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.objectType" id="apidoc.element.qunitjs.objectType">
+        function <span class="apidocSignatureSpan">qunitjs.</span>objectType
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function objectType(obj) {
+	if (typeof obj === &#x22;undefined&#x22;) {
+		return &#x22;undefined&#x22;;
+	}
+
+	// Consider: typeof null === object
+	if (obj === null) {
+		return &#x22;null&#x22;;
+	}
+
+	var match = toString.call(obj).match(/^\[object\s(.*)\]$/),
+	    type = match &#x26;&#x26; match[1];
+
+	switch (type) {
+		case &#x22;Number&#x22;:
+			if (isNaN(obj)) {
+				return &#x22;nan&#x22;;
+			}
+			return &#x22;number&#x22;;
+		case &#x22;String&#x22;:
+		case &#x22;Boolean&#x22;:
+		case &#x22;Array&#x22;:
+		case &#x22;Set&#x22;:
+		case &#x22;Map&#x22;:
+		case &#x22;Date&#x22;:
+		case &#x22;RegExp&#x22;:
+		case &#x22;Function&#x22;:
+		case &#x22;Symbol&#x22;:
+			return type.toLowerCase();
+	}
+
+	if ((typeof obj === &#x22;undefined&#x22; ? &#x22;undefined&#x22; : _typeof(obj)) === &#x22;object&#x22;) {
+		return &#x22;object&#x22;;
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.on" id="apidoc.element.qunitjs.on">
+        function <span class="apidocSignatureSpan">qunitjs.</span>on
+        <span class="apidocSignatureSpan">(eventName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function on(eventName, callback) {
+	if (objectType(eventName) !== &#x22;string&#x22;) {
+		throw new TypeError(&#x22;eventName must be a string when registering a listener&#x22;);
+	} else if (!inArray(eventName, SUPPORTED_EVENTS)) {
+		var events = SUPPORTED_EVENTS.join(&#x22;, &#x22;);
+		throw new Error(&#x22;\&#x22;&#x22; + eventName + &#x22;\&#x22; is not a valid event; must be one of: &#x22; + events + &#x22;.&#x22;);
+	} else if (objectType(callback) !== &#x22;function&#x22;) {
+		throw new TypeError(&#x22;callback must be a function when registering a listener&#x22;);
+	}
+
+	if (!LISTENERS[eventName]) {
+		LISTENERS[eventName] = [];
+	}
+
+	// Don&#x27;t register the same callback more than once
+	if (!inArray(callback, LISTENERS[eventName])) {
+		LISTENERS[eventName].push(callback);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		const filePath = path.resolve( process.cwd(), files[ i ] );
+		delete require.cache[ filePath ];
+		require( filePath );
+	}
+
+	QUnit.start();
+
+	QUnit.<span class="apidocCodeKeywordSpan">on</span>( &#x22;runEnd&#x22;, function setExitCode( data ) {
+		if ( data.testCounts.failed ) {
+			process.exitCode = 1;
+		} else {
+			process.exitCode = 0;
+		}
+	} );
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.onError" id="apidoc.element.qunitjs.onError">
+        function <span class="apidocSignatureSpan">qunitjs.</span>onError
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onError(error) {
+	for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+		args[_key - 1] = arguments[_key];
+	}
+
+	if (config.current) {
+		if (config.current.ignoreGlobalErrors) {
+			return true;
+		}
+		pushFailure.apply(undefined, [error.message, error.fileName + &#x22;:&#x22; + error.lineNumber].concat(args));
+	} else {
+		test(&#x22;global failure&#x22;, extend(function () {
+			pushFailure.apply(undefined, [error.message, error.fileName + &#x22;:&#x22; + error.lineNumber].concat(args));
+		}, { validTest: true }));
+	}
+
+	return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.only" id="apidoc.element.qunitjs.only">
+        function <span class="apidocSignatureSpan">qunitjs.</span>only
+        <span class="apidocSignatureSpan">(testName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function only(testName, callback) {
+	if (focused) {
+		return;
+	}
+
+	config.queue.length = 0;
+	focused = true;
+
+	var newTest = new Test({
+		testName: testName,
+		callback: callback
+	});
+
+	newTest.queue();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.pushFailure" id="apidoc.element.qunitjs.pushFailure">
+        function <span class="apidocSignatureSpan">qunitjs.</span>pushFailure
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pushFailure() {
+	if (!config.current) {
+		throw new Error(&#x22;pushFailure() assertion outside test context, in &#x22; + sourceFromStacktrace(2));
+	}
+
+	// Gets current test obj
+	var currentTest = config.current;
+
+	return currentTest.pushFailure.apply(currentTest, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.run" id="apidoc.element.qunitjs.run">
+        function <span class="apidocSignatureSpan">qunitjs.</span>run
+        <span class="apidocSignatureSpan">( args, options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function run( args, options ) {
+	const files = utils.getFilesFromArgs( args );
+
+	// During development, QUnit is built into &#x22;dist/&#x22;, but when published to npm
+	// we move it to &#x22;qunit/&#x22;. This IIFE handles both cases.
+	QUnit = ( function requireQUnit() {
+		try {
+			delete require.cache[ require.resolve( &#x22;../qunit/qunit&#x22; ) ];
+			return require( &#x22;../qunit/qunit&#x22; );
+		} catch ( e ) {
+			if ( e.code === &#x22;MODULE_NOT_FOUND&#x22; ) {
+				delete require.cache[ require.resolve( &#x22;../dist/qunit&#x22; ) ];
+				return require( &#x22;../dist/qunit&#x22; );
+			}
+			throw e;
+		}
+	}() );
+
+	if ( options.filter ) {
+		QUnit.config.filter = options.filter;
+	}
+
+	const seed = options.seed;
+	if ( seed ) {
+		if ( seed === true ) {
+			QUnit.config.seed = Math.random().toString( 36 ).slice( 2 );
+		} else {
+			QUnit.config.seed = seed;
+		}
+
+		console.log( `Running tests with seed: ${QUnit.config.seed}` );
+	}
+
+	// TODO: Enable mode where QUnit is not auto-injected, but other setup is
+	// still done automatically.
+	global.QUnit = QUnit;
+
+	options.reporter.init( QUnit );
+
+	for ( let i = 0; i &#x3c; files.length; i++ ) {
+		const filePath = path.resolve( process.cwd(), files[ i ] );
+		delete require.cache[ filePath ];
+		require( filePath );
+	}
+
+	QUnit.start();
+
+	QUnit.on( &#x22;runEnd&#x22;, function setExitCode( data ) {
+		if ( data.testCounts.failed ) {
+			process.exitCode = 1;
+		} else {
+			process.exitCode = 0;
+		}
+	} );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.skip" id="apidoc.element.qunitjs.skip">
+        function <span class="apidocSignatureSpan">qunitjs.</span>skip
+        <span class="apidocSignatureSpan">(testName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function skip(testName) {
+	if (focused) {
+		return;
+	}
+
+	var test = new Test({
+		testName: testName,
+		skip: true
+	});
+
+	test.queue();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.stack" id="apidoc.element.qunitjs.stack">
+        function <span class="apidocSignatureSpan">qunitjs.</span>stack
+        <span class="apidocSignatureSpan">(offset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stack(offset) {
+		offset = (offset || 0) + 2;
+		return sourceFromStacktrace(offset);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.start" id="apidoc.element.qunitjs.start">
+        function <span class="apidocSignatureSpan">qunitjs.</span>start
+        <span class="apidocSignatureSpan">(count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start(count) {
+		var globalStartAlreadyCalled = globalStartCalled;
+
+		if (!config.current) {
+			globalStartCalled = true;
+
+			if (runStarted) {
+				throw new Error(&#x22;Called start() while test already started running&#x22;);
+			} else if (globalStartAlreadyCalled || count &#x3e; 1) {
+				throw new Error(&#x22;Called start() outside of a test context too many times&#x22;);
+			} else if (config.autostart) {
+				throw new Error(&#x22;Called start() outside of a test context when &#x22; + &#x22;QUnit.config.autostart was true&#x22;);
+			} else if (!config.pageLoaded) {
+
+				// The page isn&#x27;t completely loaded yet, so we set autostart and then
+				// load if we&#x27;re in Node or wait for the browser&#x27;s load event.
+				config.autostart = true;
+
+				// Starts from Node even if .load was not previously called. We still return
+				// early otherwise we&#x27;ll wind up &#x22;beginning&#x22; twice.
+				if (!defined.document) {
+					QUnit.load();
+				}
+
+				return;
+			}
+		} else {
+			throw new Error(&#x22;QUnit.start cannot be called inside a test context.&#x22;);
+		}
+
+		scheduleBegin();
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	for ( let i = 0; i &#x3c; files.length; i++ ) {
+		const filePath = path.resolve( process.cwd(), files[ i ] );
+		delete require.cache[ filePath ];
+		require( filePath );
+	}
+
+	QUnit.<span class="apidocCodeKeywordSpan">start</span>();
+
+	QUnit.on( &#x22;runEnd&#x22;, function setExitCode( data ) {
+		if ( data.testCounts.failed ) {
+			process.exitCode = 1;
+		} else {
+			process.exitCode = 0;
+		}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.test" id="apidoc.element.qunitjs.test">
+        function <span class="apidocSignatureSpan">qunitjs.</span>test
+        <span class="apidocSignatureSpan">(testName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function test(testName, callback) {
+	if (focused) {
+		return;
+	}
+
+	var newTest = new Test({
+		testName: testName,
+		callback: callback
+	});
+
+	newTest.queue();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	utils.error( message.join( &#x22;\n&#x22; ) );
+}
+
+function getReportersFromJSReporters() {
+	const jsReporterRegex = /(.*)Reporter$/;
+	return Object.keys( JSReporters )
+		.filter( key =&#x3e; jsReporterRegex.<span class="apidocCodeKeywordSpan">test</span>( key ) )
+		.map( reporter =&#x3e; reporter.match( jsReporterRegex )[ 1 ].toLowerCase() )
+		.sort();
+}
+
+function getReportersFromDependencies() {
+	const dependencies = [].concat(
+		Object.keys( pkg.dependencies ),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.testDone" id="apidoc.element.qunitjs.testDone">
+        function <span class="apidocSignatureSpan">qunitjs.</span>testDone
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.testStart" id="apidoc.element.qunitjs.testStart">
+        function <span class="apidocSignatureSpan">qunitjs.</span>testStart
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.todo" id="apidoc.element.qunitjs.todo">
+        function <span class="apidocSignatureSpan">qunitjs.</span>todo
+        <span class="apidocSignatureSpan">(testName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function todo(testName, callback) {
+	if (focused) {
+		return;
+	}
+
+	var newTest = new Test({
+		testName: testName,
+		callback: callback,
+		todo: true
+	});
+
+	newTest.queue();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.qunitjs.QUnit" id="apidoc.module.qunitjs.QUnit">module qunitjs.QUnit</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.begin" id="apidoc.element.qunitjs.QUnit.begin">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>begin
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.diff" id="apidoc.element.qunitjs.QUnit.diff">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>diff
+        <span class="apidocSignatureSpan">(o, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diff = function (o, n) {
+		var diff, output, text;
+		diff = new DiffMatchPatch();
+		output = diff.DiffMain(o, n);
+		diff.diffCleanupEfficiency(output);
+		text = diff.diffPrettyHtml(output);
+
+		return text;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.done" id="apidoc.element.qunitjs.QUnit.done">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>done
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.equiv" id="apidoc.element.qunitjs.QUnit.equiv">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>equiv
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function innerEquiv(a, b) {
+		var i, pair;
+
+		// We&#x27;re done when there&#x27;s nothing more to compare
+		if (arguments.length &#x3c; 2) {
+			return true;
+		}
+
+		// Clear the global pair queue and add the top-level values being compared
+		pairs = [{ a: a, b: b }];
+
+		for (i = 0; i &#x3c; pairs.length; i++) {
+			pair = pairs[i];
+
+			// Perform type-specific comparison on any pairs that are not strictly
+			// equal. For container types, that comparison will postpone comparison
+			// of any sub-container pair to the end of the pair queue. This gives
+			// breadth-first search order. It also avoids the reprocessing of
+			// reference-equal siblings, cousins etc, which can have a significant speed
+			// impact when comparing a container of small objects each of which has a
+			// reference to the same (singleton) large object.
+			if (pair.a !== pair.b &#x26;&#x26; !typeEquiv(pair.a, pair.b)) {
+				return false;
+			}
+		}
+
+		// ...across all consecutive argument pairs
+		return arguments.length === 2 || innerEquiv.apply(this, [].slice.call(arguments, 1));
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.extend" id="apidoc.element.qunitjs.QUnit.extend">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>extend
+        <span class="apidocSignatureSpan">(a, b, undefOnly)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(a, b, undefOnly) {
+	for (var prop in b) {
+		if (hasOwn.call(b, prop)) {
+			if (b[prop] === undefined) {
+				delete a[prop];
+			} else if (!(undefOnly &#x26;&#x26; typeof a[prop] !== &#x22;undefined&#x22;)) {
+				a[prop] = b[prop];
+			}
+		}
+	}
+
+	return a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.is" id="apidoc.element.qunitjs.QUnit.is">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>is
+        <span class="apidocSignatureSpan">(type, obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function is(type, obj) {
+	return objectType(obj) === type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.load" id="apidoc.element.qunitjs.QUnit.load">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>load
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load() {
+		config.pageLoaded = true;
+
+		// Initialize the configuration options
+		extend(config, {
+			stats: { all: 0, bad: 0 },
+			started: 0,
+			updateRate: 1000,
+			autostart: true,
+			filter: &#x22;&#x22;
+		}, true);
+
+		if (!runStarted) {
+			config.blocking = false;
+
+			if (config.autostart) {
+				scheduleBegin();
+			}
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.log" id="apidoc.element.qunitjs.QUnit.log">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>log
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	if ( seed ) {
+		if ( seed === true ) {
+			QUnit.config.seed = Math.random().toString( 36 ).slice( 2 );
+		} else {
+			QUnit.config.seed = seed;
+		}
+
+		console.<span class="apidocCodeKeywordSpan">log</span>( `Running tests with seed: ${QUnit.config.seed}` );
+	}
+
+	// TODO: Enable mode where QUnit is not auto-injected, but other setup is
+	// still done automatically.
+	global.QUnit = QUnit;
+
+	options.reporter.init( QUnit );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.module" id="apidoc.element.qunitjs.QUnit.module">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>module
+        <span class="apidocSignatureSpan">(name, testEnvironment, executeNow)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function module(name, testEnvironment, executeNow) {
+		if (arguments.length === 2) {
+			if (objectType(testEnvironment) === &#x22;function&#x22;) {
+				executeNow = testEnvironment;
+				testEnvironment = undefined;
+			}
+		}
+
+		var module = createModule(name, testEnvironment);
+
+		// Move any hooks to a &#x27;hooks&#x27; object
+		if (module.testEnvironment) {
+			module.hooks = {
+				before: module.testEnvironment.before,
+				beforeEach: module.testEnvironment.beforeEach,
+				afterEach: module.testEnvironment.afterEach,
+				after: module.testEnvironment.after
+			};
+
+			delete module.testEnvironment.before;
+			delete module.testEnvironment.beforeEach;
+			delete module.testEnvironment.afterEach;
+			delete module.testEnvironment.after;
+		}
+
+		var moduleFns = {
+			before: setHook(module, &#x22;before&#x22;),
+			beforeEach: setHook(module, &#x22;beforeEach&#x22;),
+			afterEach: setHook(module, &#x22;afterEach&#x22;),
+			after: setHook(module, &#x22;after&#x22;)
+		};
+
+		var currentModule = config.currentModule;
+		if (objectType(executeNow) === &#x22;function&#x22;) {
+			moduleStack.push(module);
+			config.currentModule = module;
+			executeNow.call(module.testEnvironment, moduleFns);
+			moduleStack.pop();
+			module = module.parentModule || currentModule;
+		}
+
+		config.currentModule = module;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.moduleDone" id="apidoc.element.qunitjs.QUnit.moduleDone">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>moduleDone
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.moduleStart" id="apidoc.element.qunitjs.QUnit.moduleStart">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>moduleStart
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.objectType" id="apidoc.element.qunitjs.QUnit.objectType">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>objectType
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function objectType(obj) {
+	if (typeof obj === &#x22;undefined&#x22;) {
+		return &#x22;undefined&#x22;;
+	}
+
+	// Consider: typeof null === object
+	if (obj === null) {
+		return &#x22;null&#x22;;
+	}
+
+	var match = toString.call(obj).match(/^\[object\s(.*)\]$/),
+	    type = match &#x26;&#x26; match[1];
+
+	switch (type) {
+		case &#x22;Number&#x22;:
+			if (isNaN(obj)) {
+				return &#x22;nan&#x22;;
+			}
+			return &#x22;number&#x22;;
+		case &#x22;String&#x22;:
+		case &#x22;Boolean&#x22;:
+		case &#x22;Array&#x22;:
+		case &#x22;Set&#x22;:
+		case &#x22;Map&#x22;:
+		case &#x22;Date&#x22;:
+		case &#x22;RegExp&#x22;:
+		case &#x22;Function&#x22;:
+		case &#x22;Symbol&#x22;:
+			return type.toLowerCase();
+	}
+
+	if ((typeof obj === &#x22;undefined&#x22; ? &#x22;undefined&#x22; : _typeof(obj)) === &#x22;object&#x22;) {
+		return &#x22;object&#x22;;
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.on" id="apidoc.element.qunitjs.QUnit.on">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>on
+        <span class="apidocSignatureSpan">(eventName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function on(eventName, callback) {
+	if (objectType(eventName) !== &#x22;string&#x22;) {
+		throw new TypeError(&#x22;eventName must be a string when registering a listener&#x22;);
+	} else if (!inArray(eventName, SUPPORTED_EVENTS)) {
+		var events = SUPPORTED_EVENTS.join(&#x22;, &#x22;);
+		throw new Error(&#x22;\&#x22;&#x22; + eventName + &#x22;\&#x22; is not a valid event; must be one of: &#x22; + events + &#x22;.&#x22;);
+	} else if (objectType(callback) !== &#x22;function&#x22;) {
+		throw new TypeError(&#x22;callback must be a function when registering a listener&#x22;);
+	}
+
+	if (!LISTENERS[eventName]) {
+		LISTENERS[eventName] = [];
+	}
+
+	// Don&#x27;t register the same callback more than once
+	if (!inArray(callback, LISTENERS[eventName])) {
+		LISTENERS[eventName].push(callback);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		const filePath = path.resolve( process.cwd(), files[ i ] );
+		delete require.cache[ filePath ];
+		require( filePath );
+	}
+
+	QUnit.start();
+
+	QUnit.<span class="apidocCodeKeywordSpan">on</span>( &#x22;runEnd&#x22;, function setExitCode( data ) {
+		if ( data.testCounts.failed ) {
+			process.exitCode = 1;
+		} else {
+			process.exitCode = 0;
+		}
+	} );
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.onError" id="apidoc.element.qunitjs.QUnit.onError">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>onError
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onError(error) {
+	for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+		args[_key - 1] = arguments[_key];
+	}
+
+	if (config.current) {
+		if (config.current.ignoreGlobalErrors) {
+			return true;
+		}
+		pushFailure.apply(undefined, [error.message, error.fileName + &#x22;:&#x22; + error.lineNumber].concat(args));
+	} else {
+		test(&#x22;global failure&#x22;, extend(function () {
+			pushFailure.apply(undefined, [error.message, error.fileName + &#x22;:&#x22; + error.lineNumber].concat(args));
+		}, { validTest: true }));
+	}
+
+	return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.only" id="apidoc.element.qunitjs.QUnit.only">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>only
+        <span class="apidocSignatureSpan">(testName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function only(testName, callback) {
+	if (focused) {
+		return;
+	}
+
+	config.queue.length = 0;
+	focused = true;
+
+	var newTest = new Test({
+		testName: testName,
+		callback: callback
+	});
+
+	newTest.queue();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.pushFailure" id="apidoc.element.qunitjs.QUnit.pushFailure">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>pushFailure
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pushFailure() {
+	if (!config.current) {
+		throw new Error(&#x22;pushFailure() assertion outside test context, in &#x22; + sourceFromStacktrace(2));
+	}
+
+	// Gets current test obj
+	var currentTest = config.current;
+
+	return currentTest.pushFailure.apply(currentTest, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.skip" id="apidoc.element.qunitjs.QUnit.skip">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>skip
+        <span class="apidocSignatureSpan">(testName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function skip(testName) {
+	if (focused) {
+		return;
+	}
+
+	var test = new Test({
+		testName: testName,
+		skip: true
+	});
+
+	test.queue();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.stack" id="apidoc.element.qunitjs.QUnit.stack">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>stack
+        <span class="apidocSignatureSpan">(offset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function stack(offset) {
+		offset = (offset || 0) + 2;
+		return sourceFromStacktrace(offset);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.start" id="apidoc.element.qunitjs.QUnit.start">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>start
+        <span class="apidocSignatureSpan">(count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start(count) {
+		var globalStartAlreadyCalled = globalStartCalled;
+
+		if (!config.current) {
+			globalStartCalled = true;
+
+			if (runStarted) {
+				throw new Error(&#x22;Called start() while test already started running&#x22;);
+			} else if (globalStartAlreadyCalled || count &#x3e; 1) {
+				throw new Error(&#x22;Called start() outside of a test context too many times&#x22;);
+			} else if (config.autostart) {
+				throw new Error(&#x22;Called start() outside of a test context when &#x22; + &#x22;QUnit.config.autostart was true&#x22;);
+			} else if (!config.pageLoaded) {
+
+				// The page isn&#x27;t completely loaded yet, so we set autostart and then
+				// load if we&#x27;re in Node or wait for the browser&#x27;s load event.
+				config.autostart = true;
+
+				// Starts from Node even if .load was not previously called. We still return
+				// early otherwise we&#x27;ll wind up &#x22;beginning&#x22; twice.
+				if (!defined.document) {
+					QUnit.load();
+				}
+
+				return;
+			}
+		} else {
+			throw new Error(&#x22;QUnit.start cannot be called inside a test context.&#x22;);
+		}
+
+		scheduleBegin();
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	for ( let i = 0; i &#x3c; files.length; i++ ) {
+		const filePath = path.resolve( process.cwd(), files[ i ] );
+		delete require.cache[ filePath ];
+		require( filePath );
+	}
+
+	QUnit.<span class="apidocCodeKeywordSpan">start</span>();
+
+	QUnit.on( &#x22;runEnd&#x22;, function setExitCode( data ) {
+		if ( data.testCounts.failed ) {
+			process.exitCode = 1;
+		} else {
+			process.exitCode = 0;
+		}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.test" id="apidoc.element.qunitjs.QUnit.test">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>test
+        <span class="apidocSignatureSpan">(testName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function test(testName, callback) {
+	if (focused) {
+		return;
+	}
+
+	var newTest = new Test({
+		testName: testName,
+		callback: callback
+	});
+
+	newTest.queue();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	utils.error( message.join( &#x22;\n&#x22; ) );
+}
+
+function getReportersFromJSReporters() {
+	const jsReporterRegex = /(.*)Reporter$/;
+	return Object.keys( JSReporters )
+		.filter( key =&#x3e; jsReporterRegex.<span class="apidocCodeKeywordSpan">test</span>( key ) )
+		.map( reporter =&#x3e; reporter.match( jsReporterRegex )[ 1 ].toLowerCase() )
+		.sort();
+}
+
+function getReportersFromDependencies() {
+	const dependencies = [].concat(
+		Object.keys( pkg.dependencies ),
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.testDone" id="apidoc.element.qunitjs.QUnit.testDone">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>testDone
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.testStart" id="apidoc.element.qunitjs.QUnit.testStart">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>testStart
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loggingCallback(callback) {
+			if (objectType(callback) !== &#x22;function&#x22;) {
+				throw new Error(&#x22;QUnit logging methods require a callback function as their first parameters.&#x22;);
+			}
+
+			config.callbacks[key].push(callback);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.QUnit.todo" id="apidoc.element.qunitjs.QUnit.todo">
+        function <span class="apidocSignatureSpan">qunitjs.QUnit.</span>todo
+        <span class="apidocSignatureSpan">(testName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function todo(testName, callback) {
+	if (focused) {
+		return;
+	}
+
+	var newTest = new Test({
+		testName: testName,
+		callback: callback,
+		todo: true
+	});
+
+	newTest.queue();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.qunitjs.assert" id="apidoc.module.qunitjs.assert">module qunitjs.assert</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.assert.raises" id="apidoc.element.qunitjs.assert.raises">
+        function <span class="apidocSignatureSpan">qunitjs.assert.</span>raises
+        <span class="apidocSignatureSpan">(block, expected, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function throws(block, expected, message) {
+			var actual = void 0,
+			    result = false;
+
+			var currentTest = this instanceof Assert &#x26;&#x26; this.test || config.current;
+
+			// &#x27;expected&#x27; is optional unless doing string comparison
+			if (objectType(expected) === &#x22;string&#x22;) {
+				if (message == null) {
+					message = expected;
+					expected = null;
+				} else {
+					throw new Error(&#x22;throws/raises does not accept a string value for the expected argument.\n&#x22; + &#x22;Use a non-string object value
+ (e.g. regExp) instead if it&#x27;s necessary.&#x22;);
+				}
+			}
+
+			currentTest.ignoreGlobalErrors = true;
+			try {
+				block.call(currentTest.testEnvironment);
+			} catch (e) {
+				actual = e;
+			}
+			currentTest.ignoreGlobalErrors = false;
+
+			if (actual) {
+				var expectedType = objectType(expected);
+
+				// We don&#x27;t want to validate thrown error
+				if (!expected) {
+					result = true;
+					expected = null;
+
+					// Expected is a regexp
+				} else if (expectedType === &#x22;regexp&#x22;) {
+					result = expected.test(errorString(actual));
+
+					// Expected is a constructor, maybe an Error constructor
+				} else if (expectedType === &#x22;function&#x22; &#x26;&#x26; actual instanceof expected) {
+					result = true;
+
+					// Expected is an Error object
+				} else if (expectedType === &#x22;object&#x22;) {
+					result = actual instanceof expected.constructor &#x26;&#x26; actual.name === expected.name &#x26;&#x26; actual.message === expected.message;
+
+					// Expected is a validation function which returns true if validation passed
+				} else if (expectedType === &#x22;function&#x22; &#x26;&#x26; expected.call({}, actual) === true) {
+					expected = null;
+					result = true;
+				}
+			}
+
+			currentTest.assert.pushResult({
+				result: result,
+				actual: actual,
+				expected: expected,
+				message: message
+			});
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.qunitjs.dump" id="apidoc.module.qunitjs.dump">module qunitjs.dump</a></h1>
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.down" id="apidoc.element.qunitjs.dump.down">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>down
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function down(a) {
+			this.depth -= a || 1;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.indent" id="apidoc.element.qunitjs.dump.indent">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>indent
+        <span class="apidocSignatureSpan">(extra)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function indent(extra) {
+			if (!this.multiline) {
+				return &#x22;&#x22;;
+			}
+			var chr = this.indentChar;
+			if (this.HTML) {
+				chr = chr.replace(/\t/g, &#x22;   &#x22;).replace(/ /g, &#x22;&#x26;#160;&#x22;);
+			}
+			return new Array(this.depth + (extra || 0)).join(chr);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.join" id="apidoc.element.qunitjs.dump.join">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>join
+        <span class="apidocSignatureSpan">(pre, arr, post)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function join(pre, arr, post) {
+		var s = dump.separator(),
+		    base = dump.indent(),
+		    inner = dump.indent(1);
+		if (arr.join) {
+			arr = arr.join(&#x22;,&#x22; + s + inner);
+		}
+		if (!arr) {
+			return pre + post;
+		}
+		return [pre, inner + arr, base + post].join(s);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+function displayAvailableReporters( input ) {
+	const jsReporters = getReportersFromJSReporters();
+
+	const message = [
+		`No reporter found matching &#x22;${input}&#x22;.`,
+		`Available reporters from JS Reporters are: ${jsReporters.<span class="apidocCodeKeywordSpan">join</span>( &#x22;, &#x22; )}`
+	];
+
+	const npmReporters = getReportersFromDependencies();
+	if ( npmReporters.length ) {
+		message.push(
+			`Available custom reporters from dependencies are: ${npmReporters.join( &#x22;, &#x22; )}`
+		);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.literal" id="apidoc.element.qunitjs.dump.literal">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>literal
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function literal(o) {
+		return o + &#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parse" id="apidoc.element.qunitjs.dump.parse">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>parse
+        <span class="apidocSignatureSpan">(obj, objType, stack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(obj, objType, stack) {
+			stack = stack || [];
+			var res,
+			    parser,
+			    parserType,
+			    objIndex = stack.indexOf(obj);
+
+			if (objIndex !== -1) {
+				return &#x22;recursion(&#x22; + (objIndex - stack.length) + &#x22;)&#x22;;
+			}
+
+			objType = objType || this.typeOf(obj);
+			parser = this.parsers[objType];
+			parserType = typeof parser === &#x22;undefined&#x22; ? &#x22;undefined&#x22; : _typeof(parser);
+
+			if (parserType === &#x22;function&#x22;) {
+				stack.push(obj);
+				res = parser.call(this, obj, stack);
+				stack.pop();
+				return res;
+			}
+			return parserType === &#x22;string&#x22; ? parser : this.parsers.error;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.quote" id="apidoc.element.qunitjs.dump.quote">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>quote
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function quote(str) {
+		return &#x22;\&#x22;&#x22; + str.toString().replace(/\\/g, &#x22;\\\\&#x22;).replace(/&#x22;/g, &#x22;\\\&#x22;&#x22;) + &#x22;\&#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.separator" id="apidoc.element.qunitjs.dump.separator">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>separator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function separator() {
+			if (this.multiline) {
+				return this.HTML ? &#x22;&#x3c;br /&#x3e;&#x22; : &#x22;\n&#x22;;
+			} else {
+				return this.HTML ? &#x22;&#x26;#160;&#x22; : &#x22; &#x22;;
+			}
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.setParser" id="apidoc.element.qunitjs.dump.setParser">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>setParser
+        <span class="apidocSignatureSpan">(name, parser)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setParser(name, parser) {
+			this.parsers[name] = parser;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.typeOf" id="apidoc.element.qunitjs.dump.typeOf">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>typeOf
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function typeOf(obj) {
+			var type;
+
+			if (obj === null) {
+				type = &#x22;null&#x22;;
+			} else if (typeof obj === &#x22;undefined&#x22;) {
+				type = &#x22;undefined&#x22;;
+			} else if (is(&#x22;regexp&#x22;, obj)) {
+				type = &#x22;regexp&#x22;;
+			} else if (is(&#x22;date&#x22;, obj)) {
+				type = &#x22;date&#x22;;
+			} else if (is(&#x22;function&#x22;, obj)) {
+				type = &#x22;function&#x22;;
+			} else if (obj.setInterval !== undefined &#x26;&#x26; obj.document !== undefined &#x26;&#x26; obj.nodeType === undefined) {
+				type = &#x22;window&#x22;;
+			} else if (obj.nodeType === 9) {
+				type = &#x22;document&#x22;;
+			} else if (obj.nodeType) {
+				type = &#x22;node&#x22;;
+			} else if (isArray(obj)) {
+				type = &#x22;array&#x22;;
+			} else if (obj.constructor === Error.prototype.constructor) {
+				type = &#x22;error&#x22;;
+			} else {
+				type = typeof obj === &#x22;undefined&#x22; ? &#x22;undefined&#x22; : _typeof(obj);
+			}
+			return type;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.up" id="apidoc.element.qunitjs.dump.up">
+        function <span class="apidocSignatureSpan">qunitjs.dump.</span>up
+        <span class="apidocSignatureSpan">(a)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function up(a) {
+			this.depth += a || 1;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.qunitjs.dump.parsers" id="apidoc.module.qunitjs.dump.parsers">module qunitjs.dump.parsers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.arguments" id="apidoc.element.qunitjs.dump.parsers.arguments">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>arguments
+        <span class="apidocSignatureSpan">(arr, stack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function array(arr, stack) {
+		var i = arr.length,
+		    ret = new Array(i);
+
+		if (dump.maxDepth &#x26;&#x26; dump.depth &#x3e; dump.maxDepth) {
+			return &#x22;[object Array]&#x22;;
+		}
+
+		this.up();
+		while (i--) {
+			ret[i] = this.parse(arr[i], undefined, stack);
+		}
+		this.down();
+		return join(&#x22;[&#x22;, ret, &#x22;]&#x22;);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.array" id="apidoc.element.qunitjs.dump.parsers.array">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>array
+        <span class="apidocSignatureSpan">(arr, stack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function array(arr, stack) {
+		var i = arr.length,
+		    ret = new Array(i);
+
+		if (dump.maxDepth &#x26;&#x26; dump.depth &#x3e; dump.maxDepth) {
+			return &#x22;[object Array]&#x22;;
+		}
+
+		this.up();
+		while (i--) {
+			ret[i] = this.parse(arr[i], undefined, stack);
+		}
+		this.down();
+		return join(&#x22;[&#x22;, ret, &#x22;]&#x22;);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.attribute" id="apidoc.element.qunitjs.dump.parsers.attribute">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>attribute
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function quote(str) {
+		return &#x22;\&#x22;&#x22; + str.toString().replace(/\\/g, &#x22;\\\\&#x22;).replace(/&#x22;/g, &#x22;\\\&#x22;&#x22;) + &#x22;\&#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.boolean" id="apidoc.element.qunitjs.dump.parsers.boolean">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>boolean
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function literal(o) {
+		return o + &#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.date" id="apidoc.element.qunitjs.dump.parsers.date">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>date
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function quote(str) {
+		return &#x22;\&#x22;&#x22; + str.toString().replace(/\\/g, &#x22;\\\\&#x22;).replace(/&#x22;/g, &#x22;\\\&#x22;&#x22;) + &#x22;\&#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.error" id="apidoc.element.qunitjs.dump.parsers.error">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>error
+        <span class="apidocSignatureSpan">(_error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function error(_error) {
+				return &#x22;Error(\&#x22;&#x22; + _error.message + &#x22;\&#x22;)&#x22;;
+			}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	const npmReporters = getReportersFromDependencies();
+	if ( npmReporters.length ) {
+		message.push(
+			`Available custom reporters from dependencies are: ${npmReporters.join( &#x22;, &#x22; )}`
+		);
+	}
+
+	utils.<span class="apidocCodeKeywordSpan">error</span>( message.join( &#x22;\n&#x22; ) );
+}
+
+function getReportersFromJSReporters() {
+	const jsReporterRegex = /(.*)Reporter$/;
+	return Object.keys( JSReporters )
+		.filter( key =&#x3e; jsReporterRegex.test( key ) )
+		.map( reporter =&#x3e; reporter.match( jsReporterRegex )[ 1 ].toLowerCase() )
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.function" id="apidoc.element.qunitjs.dump.parsers.function">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>function
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _function(fn) {
+				var ret = &#x22;function&#x22;,
+
+
+				// Functions never have name in IE
+				name = &#x22;name&#x22; in fn ? fn.name : (reName.exec(fn) || [])[1];
+
+				if (name) {
+					ret += &#x22; &#x22; + name;
+				}
+				ret += &#x22;(&#x22;;
+
+				ret = [ret, dump.parse(fn, &#x22;functionArgs&#x22;), &#x22;){&#x22;].join(&#x22;&#x22;);
+				return join(ret, dump.parse(fn, &#x22;functionCode&#x22;), &#x22;}&#x22;);
+			}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.functionArgs" id="apidoc.element.qunitjs.dump.parsers.functionArgs">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>functionArgs
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function functionArgs(fn) {
+				var args,
+				    l = fn.length;
+
+				if (!l) {
+					return &#x22;&#x22;;
+				}
+
+				args = new Array(l);
+				while (l--) {
+
+					// 97 is &#x27;a&#x27;
+					args[l] = String.fromCharCode(97 + l);
+				}
+				return &#x22; &#x22; + args.join(&#x22;, &#x22;) + &#x22; &#x22;;
+			}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.key" id="apidoc.element.qunitjs.dump.parsers.key">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>key
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function quote(str) {
+		return &#x22;\&#x22;&#x22; + str.toString().replace(/\\/g, &#x22;\\\\&#x22;).replace(/&#x22;/g, &#x22;\\\&#x22;&#x22;) + &#x22;\&#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.node" id="apidoc.element.qunitjs.dump.parsers.node">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>node
+        <span class="apidocSignatureSpan">(_node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function node(_node) {
+				var len,
+				    i,
+				    val,
+				    open = dump.HTML ? &#x22;&#x26;lt;&#x22; : &#x22;&#x3c;&#x22;,
+				    close = dump.HTML ? &#x22;&#x26;gt;&#x22; : &#x22;&#x3e;&#x22;,
+				    tag = _node.nodeName.toLowerCase(),
+				    ret = open + tag,
+				    attrs = _node.attributes;
+
+				if (attrs) {
+					for (i = 0, len = attrs.length; i &#x3c; len; i++) {
+						val = attrs[i].nodeValue;
+
+						// IE6 includes all attributes in .attributes, even ones not explicitly
+						// set. Those have values like undefined, null, 0, false, &#x22;&#x22; or
+						// &#x22;inherit&#x22;.
+						if (val &#x26;&#x26; val !== &#x22;inherit&#x22;) {
+							ret += &#x22; &#x22; + attrs[i].nodeName + &#x22;=&#x22; + dump.parse(val, &#x22;attribute&#x22;);
+						}
+					}
+				}
+				ret += close;
+
+				// Show content of TextNode or CDATASection
+				if (_node.nodeType === 3 || _node.nodeType === 4) {
+					ret += _node.nodeValue;
+				}
+
+				return ret + open + &#x22;/&#x22; + tag + close;
+			}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.nodelist" id="apidoc.element.qunitjs.dump.parsers.nodelist">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>nodelist
+        <span class="apidocSignatureSpan">(arr, stack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function array(arr, stack) {
+		var i = arr.length,
+		    ret = new Array(i);
+
+		if (dump.maxDepth &#x26;&#x26; dump.depth &#x3e; dump.maxDepth) {
+			return &#x22;[object Array]&#x22;;
+		}
+
+		this.up();
+		while (i--) {
+			ret[i] = this.parse(arr[i], undefined, stack);
+		}
+		this.down();
+		return join(&#x22;[&#x22;, ret, &#x22;]&#x22;);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.number" id="apidoc.element.qunitjs.dump.parsers.number">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>number
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function literal(o) {
+		return o + &#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.object" id="apidoc.element.qunitjs.dump.parsers.object">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>object
+        <span class="apidocSignatureSpan">(map, stack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function object(map, stack) {
+				var keys,
+				    key,
+				    val,
+				    i,
+				    nonEnumerableProperties,
+				    ret = [];
+
+				if (dump.maxDepth &#x26;&#x26; dump.depth &#x3e; dump.maxDepth) {
+					return &#x22;[object Object]&#x22;;
+				}
+
+				dump.up();
+				keys = [];
+				for (key in map) {
+					keys.push(key);
+				}
+
+				// Some properties are not always enumerable on Error objects.
+				nonEnumerableProperties = [&#x22;message&#x22;, &#x22;name&#x22;];
+				for (i in nonEnumerableProperties) {
+					key = nonEnumerableProperties[i];
+					if (key in map &#x26;&#x26; !inArray(key, keys)) {
+						keys.push(key);
+					}
+				}
+				keys.sort();
+				for (i = 0; i &#x3c; keys.length; i++) {
+					key = keys[i];
+					val = map[key];
+					ret.push(dump.parse(key, &#x22;key&#x22;) + &#x22;: &#x22; + dump.parse(val, undefined, stack));
+				}
+				dump.down();
+				return join(&#x22;{&#x22;, ret, &#x22;}&#x22;);
+			}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.regexp" id="apidoc.element.qunitjs.dump.parsers.regexp">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>regexp
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function literal(o) {
+		return o + &#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.string" id="apidoc.element.qunitjs.dump.parsers.string">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>string
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function quote(str) {
+		return &#x22;\&#x22;&#x22; + str.toString().replace(/\\/g, &#x22;\\\\&#x22;).replace(/&#x22;/g, &#x22;\\\&#x22;&#x22;) + &#x22;\&#x22;&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.dump.parsers.symbol" id="apidoc.element.qunitjs.dump.parsers.symbol">
+        function <span class="apidocSignatureSpan">qunitjs.dump.parsers.</span>symbol
+        <span class="apidocSignatureSpan">(sym)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function symbol(sym) {
+				return sym.toString();
+			}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.qunitjs.run" id="apidoc.module.qunitjs.run">module qunitjs.run</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.run.run" id="apidoc.element.qunitjs.run.run">
+        function <span class="apidocSignatureSpan">qunitjs.</span>run
+        <span class="apidocSignatureSpan">( args, options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function run( args, options ) {
+	const files = utils.getFilesFromArgs( args );
+
+	// During development, QUnit is built into &#x22;dist/&#x22;, but when published to npm
+	// we move it to &#x22;qunit/&#x22;. This IIFE handles both cases.
+	QUnit = ( function requireQUnit() {
+		try {
+			delete require.cache[ require.resolve( &#x22;../qunit/qunit&#x22; ) ];
+			return require( &#x22;../qunit/qunit&#x22; );
+		} catch ( e ) {
+			if ( e.code === &#x22;MODULE_NOT_FOUND&#x22; ) {
+				delete require.cache[ require.resolve( &#x22;../dist/qunit&#x22; ) ];
+				return require( &#x22;../dist/qunit&#x22; );
+			}
+			throw e;
+		}
+	}() );
+
+	if ( options.filter ) {
+		QUnit.config.filter = options.filter;
+	}
+
+	const seed = options.seed;
+	if ( seed ) {
+		if ( seed === true ) {
+			QUnit.config.seed = Math.random().toString( 36 ).slice( 2 );
+		} else {
+			QUnit.config.seed = seed;
+		}
+
+		console.log( `Running tests with seed: ${QUnit.config.seed}` );
+	}
+
+	// TODO: Enable mode where QUnit is not auto-injected, but other setup is
+	// still done automatically.
+	global.QUnit = QUnit;
+
+	options.reporter.init( QUnit );
+
+	for ( let i = 0; i &#x3c; files.length; i++ ) {
+		const filePath = path.resolve( process.cwd(), files[ i ] );
+		delete require.cache[ filePath ];
+		require( filePath );
+	}
+
+	QUnit.start();
+
+	QUnit.on( &#x22;runEnd&#x22;, function setExitCode( data ) {
+		if ( data.testCounts.failed ) {
+			process.exitCode = 1;
+		} else {
+			process.exitCode = 0;
+		}
+	} );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.run.abort" id="apidoc.element.qunitjs.run.abort">
+        function <span class="apidocSignatureSpan">qunitjs.run.</span>abort
+        <span class="apidocSignatureSpan">( callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abort = function ( callback ) {
+	function clearQUnit() {
+		delete global.QUnit;
+		QUnit = null;
+		if ( callback ) {
+			callback();
+		}
+	}
+
+	if ( QUnit.config.queue.length ) {
+		const nextTestIndex = QUnit.config.queue.findIndex( fn =&#x3e; fn.name === &#x22;runTest&#x22; );
+		QUnit.config.queue.splice( nextTestIndex );
+		QUnit.on( &#x22;runEnd&#x22;, clearQUnit );
+	} else {
+		clearQUnit();
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+run.restart = function( args ) {
+	if ( QUnit.config.queue.length ) {
+		console.log( &#x22;Finishing current test and restarting...&#x22; );
+	} else {
+		console.log( &#x22;Restarting...&#x22; );
+	}
+
+	run.<span class="apidocCodeKeywordSpan">abort</span>( () =&#x3e; run.apply( null, args ) );
+};
+
+run.abort = function( callback ) {
+	function clearQUnit() {
+		delete global.QUnit;
+		QUnit = null;
+		if ( callback ) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.run.restart" id="apidoc.element.qunitjs.run.restart">
+        function <span class="apidocSignatureSpan">qunitjs.run.</span>restart
+        <span class="apidocSignatureSpan">( args )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restart = function ( args ) {
+	if ( QUnit.config.queue.length ) {
+		console.log( &#x22;Finishing current test and restarting...&#x22; );
+	} else {
+		console.log( &#x22;Restarting...&#x22; );
+	}
+
+	run.abort( () =&#x3e; run.apply( null, args ) );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		clearQUnit();
+	}
+};
+
+function watcherEvent( event, args ) {
+	return ( file ) =&#x3e; {
+		console.log( `File ${event}: ${file}` );
+		run.<span class="apidocCodeKeywordSpan">restart</span>( args );
+	};
+}
+
+run.watch = function watch() {
+	const chokidar = require( &#x22;chokidar&#x22; );
+	const args = Array.prototype.slice.call( arguments );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.run.watch" id="apidoc.element.qunitjs.run.watch">
+        function <span class="apidocSignatureSpan">qunitjs.run.</span>watch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function watch() {
+	const chokidar = require( &#x22;chokidar&#x22; );
+	const args = Array.prototype.slice.call( arguments );
+
+	const watcher = chokidar.watch( &#x22;**/*.js&#x22;, {
+		ignored: IGNORED_GLOBS,
+		ignoreInitial: true
+	} );
+
+	watcher.on( &#x22;ready&#x22;, () =&#x3e; run.apply( null, args ) );
+	watcher.on( &#x22;change&#x22;, watcherEvent( &#x22;changed&#x22;, args ) );
+	watcher.on( &#x22;add&#x22;, watcherEvent( &#x22;added&#x22;, args ) );
+	watcher.on( &#x22;unlink&#x22;, watcherEvent( &#x22;removed&#x22;, args ) );
+
+	function stop() {
+		console.log( &#x22;Stopping QUnit...&#x22; );
+
+		watcher.close();
+		run.abort( () =&#x3e; {
+			process.exit();
+		} );
+	}
+
+	process.on( &#x22;SIGTERM&#x22;, stop );
+	process.on( &#x22;SIGINT&#x22;, stop );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	};
+}
+
+run.watch = function watch() {
+	const chokidar = require( &#x22;chokidar&#x22; );
+	const args = Array.prototype.slice.call( arguments );
+
+	const watcher = chokidar.<span class="apidocCodeKeywordSpan">watch</span>( &#x22;**/*.js&#x22;, {
+		ignored: IGNORED_GLOBS,
+		ignoreInitial: true
+	} );
+
+	watcher.on( &#x22;ready&#x22;, () =&#x3e; run.apply( null, args ) );
+	watcher.on( &#x22;change&#x22;, watcherEvent( &#x22;changed&#x22;, args ) );
+	watcher.on( &#x22;add&#x22;, watcherEvent( &#x22;added&#x22;, args ) );
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.qunitjs.utils" id="apidoc.module.qunitjs.utils">module qunitjs.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.utils.capitalize" id="apidoc.element.qunitjs.utils.capitalize">
+        function <span class="apidocSignatureSpan">qunitjs.utils.</span>capitalize
+        <span class="apidocSignatureSpan">( string )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function capitalize( string ) {
+	return string.charAt( 0 ).toUpperCase() + string.slice( 1 );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+module.exports = function findReporter( reporterName ) {
+	if ( !reporterName ) {
+		return JSReporters.TapReporter;
+	}
+
+	// First, check if the reporter is one of the standard js-reporters ones
+
+	const capitalizedName = utils.<span class="apidocCodeKeywordSpan">capitalize</span>( reporterName );
+	const jsReporterName = `${capitalizedName}Reporter`;
+
+	if ( JSReporters[ jsReporterName ] ) {
+		return JSReporters[ jsReporterName ];
+	}
+
+	// Second, check if the reporter is an npm package
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.utils.error" id="apidoc.element.qunitjs.utils.error">
+        function <span class="apidocSignatureSpan">qunitjs.utils.</span>error
+        <span class="apidocSignatureSpan">( message )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function error( message ) {
+	console.error( message );
+	process.exit( 1 );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	const npmReporters = getReportersFromDependencies();
+	if ( npmReporters.length ) {
+		message.push(
+			`Available custom reporters from dependencies are: ${npmReporters.join( &#x22;, &#x22; )}`
+		);
+	}
+
+	utils.<span class="apidocCodeKeywordSpan">error</span>( message.join( &#x22;\n&#x22; ) );
+}
+
+function getReportersFromJSReporters() {
+	const jsReporterRegex = /(.*)Reporter$/;
+	return Object.keys( JSReporters )
+		.filter( key =&#x3e; jsReporterRegex.test( key ) )
+		.map( reporter =&#x3e; reporter.match( jsReporterRegex )[ 1 ].toLowerCase() )
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.qunitjs.utils.getFilesFromArgs" id="apidoc.element.qunitjs.utils.getFilesFromArgs">
+        function <span class="apidocSignatureSpan">qunitjs.utils.</span>getFilesFromArgs
+        <span class="apidocSignatureSpan">( args )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFilesFromArgs( args ) {
+	let globs = args.slice();
+
+	// Default to files in the test directory
+	if ( !globs.length ) {
+		globs.push( &#x22;test/**/*.js&#x22; );
+	}
+
+	// For each of the potential globs, we check if it is a directory path and
+	// update it so that it matches the JS files in that directory.
+	globs = globs.map( glob =&#x3e; {
+		const stat = existsStat( glob );
+
+		if ( stat &#x26;&#x26; stat.isDirectory() ) {
+			return `${glob}/**/*.js`;
+		} else {
+			return glob;
+		}
+	} );
+
+	const files = walkSync( process.cwd(), { globs } );
+
+	if ( !files.length ) {
+		error( &#x22;No files were found matching: &#x22; + args.join( &#x22;, &#x22; ) );
+	}
+
+	return files;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const IGNORED_GLOBS = [
+	&#x22;**/node_modules/**&#x22;
+];
+
+let QUnit;
+
+function run( args, options ) {
+	const files = utils.<span class="apidocCodeKeywordSpan">getFilesFromArgs</span>( args );
+
+	// During development, QUnit is built into &#x22;dist/&#x22;, but when published to npm
+	// we move it to &#x22;qunit/&#x22;. This IIFE handles both cases.
+	QUnit = ( function requireQUnit() {
+		try {
+			delete require.cache[ require.resolve( &#x22;../qunit/qunit&#x22; ) ];
+			return require( &#x22;../qunit/qunit&#x22; );
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
